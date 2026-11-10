@@ -1,114 +1,38 @@
-# AI Accessibility Assistant
+# Drishtikon: AI Accessibility Assistant (Frontend)
 
-A Vue.js application designed to help visually impaired users understand images, text, and audio through advanced AI technology.
+## Problem statement
 
-## 📋 Overview
+Visually impaired users depend on screen readers, which cannot describe images and are hard to use for quick tasks like summarising a block of text. They need an interface that works by voice and reads everything aloud.
 
-AI Accessibility Assistant is a web application built with Vue 3 and Vite that provides accessibility features for visually impaired users. The application allows users to:
+## Solution
 
-- Upload images for AI processing and description
-- Input text for audio conversion
-- Process and read content aloud
-- Access results in multiple formats (copy, download)
+A voice-driven web interface built at a hackathon. Users upload an image or paste text, speak commands to control the app, and have the results read back to them, with the ability to copy or download them.
 
-## 🚀 Features
+## Tech stack
 
-- **Image Processing**: Upload images to get AI-generated descriptions
-- **Text-to-Speech**: Convert text to spoken audio
-- **Voice Input**: Use microphone for voice commands
-- **Accessible Interface**: Designed with accessibility in mind
-- **Result Management**: Save, copy, and download processed content
+Vue 3 (Composition API), Vite, Vue Router, Pinia, Tailwind CSS, Lucide icons, Web Speech API.
 
-## 🛠️ Tech Stack
+## Features
 
-- **Frontend**: Vue 3 with Composition API
-- **Routing**: Vue Router
-- **State Management**: Pinia
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide Vue
-- **Build Tool**: Vite
+- **Voice commands**: say "upload", "summarize", "compare" or "commands", and the app responds
+- **Spoken feedback**: speech synthesis reads back the interface and the results, with a clear message for unrecognised commands
+- **Upload screen** with drag and drop for images, and a text box for pasted text
+- **Result screen** with copy and download actions
+- **Accessible design** with large, clearly labelled controls
+- Routed pages for home, upload, results, settings and about
 
-## 📥 Installation
+## Future steps
 
-1. Clone the repository:
+- Connect the upload and summarise actions to an AI backend for image description and text summaries
+- More languages for voice input and speech output
+- Settings for voice speed and volume
+- Keyboard-only navigation and screen-reader testing
 
-   ```
-   git clone https://github.com/yourusername/ai-accessibility-assistant.git
-   cd ai-accessibility-assistant
-   ```
+## Getting started
 
-2. Install dependencies:
-
-   ```
-   npm install
-   ```
-
-3. Run the development server:
-
-   ```
-   npm run dev
-   ```
-
-4. Open your browser and navigate to the local development server (typically http://localhost:5173)
-
-## 🏗️ Build for Production
-
-```
-npm run build
+```bash
+npm install
+npm run dev
 ```
 
-The built files will be in the `dist` directory and can be deployed to your web server.
-
-## 🧪 Linting and Formatting
-
-- Run ESLint:
-
-  ```
-  npm run lint
-  ```
-
-- Run Prettier:
-  ```
-  npm run format
-  ```
-
-## 📁 Project Structure
-
-```
-ai-accessibility-assistant/
-├── public/               # Static assets
-├── src/
-│   ├── assets/           # CSS and other assets
-│   ├── components/       # Vue components
-│   │   └── nav/          # Navigation components
-│   ├── router/           # Vue Router configuration
-│   ├── stores/           # Pinia stores
-│   ├── views/            # Page components
-│   ├── App.vue           # Root component
-│   └── main.js           # Application entry point
-├── index.html            # HTML entry point
-├── package.json          # Dependencies and scripts
-├── vite.config.js        # Vite configuration
-├── tailwind.config.js    # Tailwind CSS configuration
-└── README.md             # Project documentation
-```
-
-## 📄 Pages
-
-- **Home**: Introduction and getting started
-- **Upload**: Interface for uploading images or entering text
-- **Results**: View processed content with options to read aloud, copy, or download
-- **Settings**: Configure application preferences
-- **About**: Information about the application and how it works
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📞 Support
-
-Need help? Contact our support team at support@example.com.
-
-## 📜 License
-
-[MIT License](LICENSE)
+Use a Chromium-based browser for voice commands, since they rely on the Web Speech API.
